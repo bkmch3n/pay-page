@@ -1,17 +1,20 @@
 [
   {
-    "text": "👉 Pay via Link (click to open)",
+    "_comment": "【連結按鈕】action 設為 'link'，點擊後會在新分頁開啟 value 的網址。適合用於 LINE Pay、街口、Richart 等有付款連結的服務。text 是按鈕上顯示的文字，value 是目標網址。",
     "action": "link",
+    "text": "👉 透過連結付款（點擊跳轉）",
     "value": "https://example.com/pay"
   },
   {
-    "text": "👉 Pay via Another Link (click to open)",
+    "_comment": "【連結按鈕】同上，可以新增多個連結按鈕，每個對應不同的付款方式或服務。",
     "action": "link",
+    "text": "👉 透過另一個連結付款（點擊跳轉）",
     "value": "https://example.com/pay2"
   },
   {
-    "text": "👉 Bank Account: (123) 000000000000 (click to copy)",
+    "_comment": "【複製按鈕】action 設為 'copy'，點擊後會將 value 的內容複製到剪貼簿。適合用於銀行帳號、匯款帳號等需要手動輸入的資訊。text 是按鈕上顯示的文字（可包含銀行名稱與帳號末四碼），value 是實際複製的內容（純帳號）。",
     "action": "copy",
+    "text": "👉 銀行帳號：(123) 000000000000（點擊複製）",
     "value": "000000000000"
   }
 ]
