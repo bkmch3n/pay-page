@@ -1,0 +1,17 @@
+[
+  {
+    "text": "👉 Pay via Link (click to open)",
+    "action": "link",
+    "value": "https://example.com/pay"
+  },
+  {
+    "text": "👉 Pay via Another Link (click to open)",
+    "action": "link",
+    "value": "https://example.com/pay2"
+  },
+  {
+    "text": "👉 Bank Account: (123) 000000000000 (click to copy)",
+    "action": "copy",
+    "value": "000000000000"
+  }
+]
