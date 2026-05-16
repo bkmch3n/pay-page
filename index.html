@@ -84,6 +84,24 @@
   </div>
 
   <script>
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      // Fallback for iOS in-app browsers (Instagram, LINE WebView)
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
+      ta.setAttribute('readonly', '');
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      ta.setSelectionRange(0, 99999); // required for iOS
+      const ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok ? Promise.resolve() : Promise.reject(new Error('execCommand failed'));
+    }
+
     fetch('links.json')
       .then(r => r.json())
       .then(links => {
@@ -103,13 +121,16 @@
             const originalText = item.text;
             btn.textContent = originalText;
             btn.addEventListener('click', () => {
-              navigator.clipboard.writeText(item.value).then(() => {
+              copyText(item.value).then(() => {
                 btn.textContent = '✅ 已複製!';
                 btn.classList.add('copied');
                 setTimeout(() => {
                   btn.textContent = originalText;
                   btn.classList.remove('copied');
                 }, 2000);
+              }).catch(() => {
+                btn.textContent = '❌ 複製失敗';
+                setTimeout(() => { btn.textContent = originalText; }, 2000);
               });
             });
             container.appendChild(btn);
