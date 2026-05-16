@@ -1,0 +1,32 @@
+[
+  {
+    "text": "👉收 Line pay (點擊跳轉)",
+    "action": "link",
+    "value": "https://line.me/ti/p/bXkKqMzAXM"
+  },
+  {
+    "text": "👉收 街口 (點擊跳轉)",
+    "action": "link",
+    "value": "https://service.jkopay.com/r/transfer?j=Transfer:901460318"
+  },
+  {
+    "text": "👉收 國泰 : (013) 699501083422 (點選複製)",
+    "action": "copy",
+    "value": "699501083422"
+  },
+  {
+    "text": "👉收 台新Richart : (812) 28881002536649 (🔗點擊跳轉App轉帳)",
+    "action": "link",
+    "value": "https://mobile.richart.tw/TSDIB_RichartWeb/RC04/RC040300?token=8D02498A2F7F93B4DC6FB4D553667015"
+  },
+  {
+    "text": "👉收 中國信託: (822) 015540286104 (點選複製)",
+    "action": "copy",
+    "value": "015540284104"
+  },
+  {
+    "text": "👉收 聯邦: (803) 888503707214 (點選複製)",
+    "action": "copy",
+    "value": "888503707214"
+  }  
+]
